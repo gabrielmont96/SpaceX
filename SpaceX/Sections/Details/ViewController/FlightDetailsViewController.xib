@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FlightDetailsViewController" customModule="Devskiller" customModuleProvider="target">
+            <connections>
+                <outlet property="imageView" destination="0o3-Dk-kbA" id="Z8p-b8-Ccl"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0o3-Dk-kbA">
+                    <rect key="frame" x="70" y="20" width="180" height="180"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="180" id="ElF-lT-MMS"/>
+                        <constraint firstAttribute="height" constant="180" id="QoI-4K-1I2"/>
+                    </constraints>
+                </imageView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="E9t-oB-p92">
+                    <rect key="frame" x="30" y="220" width="260" height="112"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eC4-03-UdW">
+                            <rect key="frame" x="0.0" y="0.0" width="260" height="32"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="32" id="ktH-fW-RGa"/>
+                            </constraints>
+                            <state key="normal" title="Article"/>
+                            <connections>
+                                <action selector="articleButton:" destination="-1" eventType="touchUpInside" id="vzC-6d-H7y"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SaX-oB-t3y">
+                            <rect key="frame" x="0.0" y="40" width="260" height="32"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="32" id="RTn-v7-Svb"/>
+                            </constraints>
+                            <state key="normal" title="Wikipedia"/>
+                            <connections>
+                                <action selector="wikipediaButton:" destination="-1" eventType="touchUpInside" id="vDi-GC-Iwd"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ta-3N-vVJ">
+                            <rect key="frame" x="0.0" y="80" width="260" height="32"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="32" id="zai-qo-iVb"/>
+                            </constraints>
+                            <state key="normal" title="Video"/>
+                            <connections>
+                                <action selector="videoButton:" destination="-1" eventType="touchUpInside" id="PO9-bq-0k5"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="eC4-03-UdW" secondAttribute="trailing" id="4lJ-Se-P30"/>
+                        <constraint firstItem="eC4-03-UdW" firstAttribute="leading" secondItem="E9t-oB-p92" secondAttribute="leading" id="JDS-Du-xun"/>
+                        <constraint firstAttribute="trailing" secondItem="SaX-oB-t3y" secondAttribute="trailing" id="KF6-v4-Izq"/>
+                        <constraint firstItem="8ta-3N-vVJ" firstAttribute="leading" secondItem="E9t-oB-p92" secondAttribute="leading" id="P1o-t7-97W"/>
+                        <constraint firstAttribute="trailing" secondItem="8ta-3N-vVJ" secondAttribute="trailing" id="fY0-8D-tWP"/>
+                        <constraint firstItem="SaX-oB-t3y" firstAttribute="leading" secondItem="E9t-oB-p92" secondAttribute="leading" id="jYf-MH-rMh"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="E9t-oB-p92" secondAttribute="trailing" constant="30" id="HTL-38-dna"/>
+                <constraint firstItem="0o3-Dk-kbA" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="d9K-wc-OdS"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="E9t-oB-p92" secondAttribute="bottom" constant="20" id="jo5-N0-d7C"/>
+                <constraint firstItem="0o3-Dk-kbA" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="lxH-5b-84G"/>
+                <constraint firstItem="E9t-oB-p92" firstAttribute="top" secondItem="0o3-Dk-kbA" secondAttribute="bottom" constant="20" id="wJ6-Ml-NbO"/>
+                <constraint firstItem="E9t-oB-p92" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="zjL-N8-TrJ"/>
+            </constraints>
+            <point key="canvasLocation" x="132" y="100"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
